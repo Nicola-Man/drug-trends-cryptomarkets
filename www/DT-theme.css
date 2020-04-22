@@ -1,0 +1,90 @@
+@import url("https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,700italic,400,300,700");
+
+img.loader-img{
+  width: 50px;
+  height: auto
+}
+
+body {
+  margin: 0;
+  font-family: "Open Sans","Helvetica Neue",Helvetica,Arial,sans-serif;
+  font-size: 15px;
+  color: #222222
+}
+/*links*/
+a {
+  color: #95a327;
+  text-decoration: none
+}
+
+a:hover,a:focus {
+  color: #6a7d14;
+  text-decoration: underline
+}
+/*plot & notes tabs*/
+.nav-tabs>li>a {
+  background-color: #e7e7e7;
+  color: #222222;
+  padding: 5px 20px;
+}
+/*navbar default background color*/
+.navbar,.navbar-default .navbar-brand,.navbar-default .dropdown-menu,.navbar-default .navbar-nav {
+  background-color: #6a7d14
+}
+/*navbar title font color - not list*/
+.navbar-default .navbar-brand,.navbar-default .navbar-brand:hover,
+/*navbar default font color*/
+.navbar-default .navbar-nav>li>a,.navbar-default .navbar-nav .open .dropdown-menu>li>a {
+  color: #ffffff
+}
+/*navbar active colors*/
+.navbar-default .navbar-nav>.active>a,
+.navbar-default .navbar-nav .open .dropdown-menu>.active>a {
+  background-color: #444444;
+  color: #ffffff
+}
+/*navbar focus color*/
+/* .dropdown-menu>li>a:focus, */
+.navbar-default .navbar-nav>a:focus,
+.navbar-default .navbar-nav>.open>a:focus,
+.navbar-default .navbar-nav>.active>a:focus {
+  background-color: #b3bd50;
+  color: #222222
+}
+/*navbar hover color*/
+/* .dropdown-menu>li>a:hover, */
+.navbar-default .navbar-nav>a:hover,
+.navbar-default .navbar-nav>.open>a:hover,
+.navbar-default .navbar-nav .open .dropdown-menu>li>a:hover {
+  background-color: transparent;
+  color: #222222
+}
+/* .dropdown-menu>.active>li>a:hover, */
+.navbar-default .navbar-nav>.active>a:hover,
+.navbar-default .navbar-nav .open .dropdown-menu>.active>a:hover {
+  background-color: transparent;
+  color: #222222
+}
+/*dropdown menu padding in wide screen*/
+.dropdown-menu>li>a {
+  padding: 12px 15px;
+}
+.navbar-nav>li>.dropdown-menu {
+  margin-bottom: 15px
+}
+/*mobile screen dropdown menu???
+.dropdown-menu>li>a,.dropdown-menu>.active>li>a {
+  color: #ffffff
+}
+.dropdown-menu>.active>a,.dropdown-menu>.active>a:hover {
+  background-color: #555555
+}
+*/
+
+/*slider input*/
+.irs-from, .irs-to, .irs-single, .irs-grid-pol {background: #6a7d14}
+.irs-bar { 
+  border-top: 1px solid #6a7d14;
+  border-bottom: 1px solid #6a7d14;
+  background: #6a7d14
+}

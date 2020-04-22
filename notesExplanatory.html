@@ -1,0 +1,60 @@
+<h1>Methods</h1>
+<p>The DNeT project has been examining cryptomarket drug listings since 20th January 2014 . Cryptomarket websites often exhibit large volumes of data. In addition, security on these websites has become increasingly complex in response to law enforcement seizures. This has made it increasingly difficult to traverse, extract and collate this information on a timely and accurate basis. To mitigate these issues, we have implemented a range of programmed automated processes that operate with minimal manual input. These automated processes, which are described in detail below, consist of (1) traversing the contents of currently active cryptomarkets;  (2) parsing the contents of individual webpages and extracting relevant and usable data in relation to the drugs that are listed for sale; and (3) classifying these listings into specific drug categories.</p>
+<p>Please read our accompanying <a href="https://ndarc.med.unsw.edu.au/resource/methods-trends-cryptomarket-drug-listings">methodology document</a> for further information.</p>
+
+<h2>Identifying and crawling cryptomarkets</h2>
+<p>Marketplaces are included in the monitoring if they:</p>
+<ul>
+<li>Facilitate trade of illicit goods and services via multiple sellers;</li>
+<li>Have more than one hundred drug listings; and</li>
+<li>Are displayed in the English language.</li>
+</ul>
+
+<p>In order to regularly access a cryptomarket, a dedicated account is created upon its initial monitoring. When a marketplace was inaccessible or only partially accessible, the data were treated as missing. If a cryptomarket can only be partially crawled at a given time point, the collected web content was not entered into the dataset. A marketplace may be down for multiple reasons, including server outages, distributed denial of service attacks (DDoS; in which multiple sources are used to generate a large amount of traffic to an online service, thereby overwhelming its servers), law enforcement seizures, exit scams and hacking attacks. If a marketplace was down at one time point, unless there was reason to believe it will not return (in the case of seizures or exit scams), attempts were made to access it at the next time point. If consecutive attempts to access a cryptomarket fail for several weeks, the market was assumed to be defunct.</p>
+
+<h2>Drug Classification</h2>
+<p>To develop an understanding of what substances are being sold on cryptomarkets, it is necessary to have a consistent framework for labelling drug listings into mutually exclusive categories. Unfortunately, categories imposed by cryptomarkets are often ambiguous, and categories conflict across marketplaces. Drug listings are also often miscategorised (e.g., cannabis listings within cluster of listings categorised as ‘stimulants’) due to server-side issues. To ensure consistency across marketplaces, we have assembled a two-tier hierarchy for classifying each recorded drug listing independently. At the first level (Level 1), drug listings are assigned a specific drug name meant to capture the active substance being sold in that listing (noting that there are some exceptions). At the second level (Level 2), drug names at Level 1 are clustered into a smaller set of mutually exclusive broader drug classes. The exception comprises key illicit drugs of interest (e.g., MDMA, cocaine, cannabis) which are categorised identically at Level 1 and Level 2 (e.g., ‘MDMA’ is in both Level 1 and Level 2).</p>
+
+<p>Chemical substances were categorised according to the Anatomical Therapeutic Chemical (ATC) Classification System. The ATC system classifies drugs into groups at five different levels, describing their therapeutic, pharmacological and chemical properties, with the lowest ATC level containing the active chemical substances found in drugs.</p>
+
+<p>Table below shows the drug classifications used in the plots.</p>
+<div class="shiny-html-output shiny-bound-output"><table class="table shiny-table table- spacing-s" style="width:auto;">
+<thead><tr><th>Drug Class</th><th>ATC Code</th><th>Description</th></tr></thead>
+<tbody>
+  <tr><td>Alcohol</td><td>-</td><td>-</td></tr>
+  <tr><td>Cannabis</td><td>-</td><td>All forms of cannabis (plant, oil, seeds, etc). This excludes synthetic cannabinoids which are classified under new psychoactive substances (NPS).</td></tr>
+  <tr><td>Cocaine</td><td>-</td><td>-</td></tr>
+  <tr><td>DMT</td><td>-</td><td>N,N-Dimethyltryptamine (DMT) only, excluding plant sources.</td></tr>
+  <tr><td>E-cigarette</td><td>-</td><td>-</td></tr>
+  <tr><td>GHB/GBL/1,4-BD</td><td>-</td><td>Gamma-hydroxybutyric acid (GHB) or gamma-butyrolactone (GBL) or 1,4-butanediol (1,4-BD)</td></tr>
+  <tr><td>Hallucinogenic mushroom</td><td>-</td><td>-</td><tr>
+  <tr><td>Heroin</td><td>-</td><td>-</td><tr>
+  <tr><td>Ketamine</td><td>-</td><td>-</td><tr>
+  <tr><td>LSD</td><td>-</td><td>Lysergic acid diethylamide (LSD)</td><tr>
+  <tr><td>MDA</td><td>-</td><td>3,4-Methylenedioxyamphetamine (MDA)</td><tr>
+  <tr><td>MDMA</td><td>-</td><td>3,4-Methyl​enedioxy​methamphetamine (MDMA), commonly known as ecstasy.</td><tr>
+  <tr><td>Meth/amphetamine</td><td>-</td><td>Any illicit amphetamine or methamphetamine (includes speed and 'ice'). This excludes drugs identified as pharmaceutical stimulants (see below).</td><tr>
+  <tr><td>New psychoactive substances*</td><td>-</td><td>New psychoactive substances (NPS) e.g., acetylfentanyl and 5-MeO-MiPT. Note that this class includes synthetic cannabinoids, novel benzodiazepines, fentanyl analogues and other emerging substances.</td><tr>
+  <tr><td>Paraphernalia*</td><td>-</td><td>Drug checking equipment, injecting equipment, naloxone, vaping equipment and other paraphernalia</td><tr>
+  <tr><td>PCP</td><td>-</td><td></td><tr>
+  <tr><td>PIEDs/weight loss*</td><td>-</td><td>Performance and image enhancing drugs (e.g, anabolic steroids, androgens) and weight loss products</td><tr>
+  <tr><td>Tobacco</td><td>-</td><td></td><tr>
+  <tr><td>Psychostimulants & nootropics*</td><td>N06B</td><td>Pharmaceutical stimulants (e.g., dexamphetamine, methylphenidate, modafinil)</td><tr>
+  <tr><td>Benzodiazepines*</td><td>N05BA</td><td>Benzodiazepines (e.g., alprazolam, diazepam). Note that certain novel benzodiazepines (e.g., etizolam) have been classified as NPS.</td><tr>
+  <tr><td>Opioids*</td><td>N02A, N07BB</td><td>Pharmaceutical opioids (e.g., oxycodone, fentanyl etc), drugs used in opioid dependence (e.g., methadone) and opium. Note that certain novel synthetic opioids e.g., acetylfentanyl have been classified as NPS.</td><tr>
+  <tr><td>Inhalants*</td><td>-</td><td>Alkyl nitrites and nitrous oxide</td><tr>
+  <tr><td>Other medicines*</td><td>J05AP, G04BE, M03, R, N05A, N06A, N01A, N03A, N02B, N05B, N05CM, N05CA, N06DX, N01B, N02C, H02, S01, D04A</td><td>Antivirals, erectile dysfunction drugs, muscle relaxants/anti-inflammatories, respiratory system drugs, antiparasitic products, antipsychotics, antidepressants, general and local anaesthetics, antiepileptics, hypnotics and sedatives, barbiturates, other analgesics and antipyretics, anxiolytics, anti-dementia drugs, corticosteroids, ophthalmologicals, antihistamines</td><tr>
+  <tr><td>Other drugs</td><td>-</td><td>Precursors (e.g., ephedrine) and drug listings with multiple drugs (e.g., “Cocaine+Heroin”)</td><tr>
+  <tr><td>Categories excluded from reporting</td><td>-</td><td>Miscellaneous non-drug items (e.g., hotel listings) and custom drug listings</td><tr>
+</tbody>
+<tfoot><tr><td colspan="3"><small>Note: * indicates drug classes containing multiple Level 1 drugs which we hope to report on in future. Refer to description column for details of included Level 1 drugs.</small></td></tr></tfoot>
+</table></div>
+
+<h2>Data Analysis and Interpretation of Results</h2>
+<p>Data in the public online interactive visualisation and bulletin have been disaggregated by Level 2 class and market name. The data can be viewed through two metrics: the number of listings observed in a given week or the number of unique vendors observed in a given week.</p>
+
+<p>The number of listings is the sum of listings observed in a week, belonging to a specific market or drug class. For this measure, duplicate listings within the same week are removed. Duplicate listings in this case are defined as listings with identical names that are sold by the same vendor, contain the same quantity of drug, and are located on the same market. Removing these duplicate listings avoids recounting repeated listings that often arise within a marketplace (promotional offers, server-side errors). <b>We can interpret total drug-related listings over time at the market level as indicative level of market size, while number of listings over time at the drug level is indicative of the availability of that drug.</b></p> 
+
+<h2>Key caveats to interpretation of findings</h2>
+<p><b>Data are only an approximation of total drug availability via cryptomarkets.</b> Certain figures contained in the online visualisation display the total number of listings and vendors observed on all monitored cryptomarkets at a given time. These totals can be interpreted as an approximation of global drug cryptomarket availability only. These data are limited  due to the inability to monitor and identify all active cryptomarkets, and the inability to extract from and crawl markets as soon as they appear. However, as large markets are given priority for monitoring, these figures show reasonable estimates for trends in drug availability on cryptomarkets. It is important to note that drug listings via cryptomarkets likely only comprise a small proportion of the total drug markets, which also include street-based selling, social supply and other digitally mediated drug trading (e.g. app based). According to the World Drug Report 2019, monthly drug-related revenue of the then eight largest darknet markets amounts to 0.1-0.2 percent of overall drug retail.</p>
+<p><b>Inferences of sale volume cannot be made from the presented data.</b> The number of listings and number of unique vendors does not capture any information regarding the number of sales of any listing, and therefore, they cannot be translated to any metric that reflects the sale volume of a market or specific drug. These metrics capture the availability of a certain drug only on a specific market. To gain information regarding the volume of actual purchases, other features such as customer feedback and vendor ratings must be analysed. Due to the varying nature of what is visible on differing markets and our limited scope of data extraction, a universal analysis can only be framed in terms of the number of listings or the number of vendors. We refer the reader to <a href="https://papers.ssrn.com/sol3/papers.cfm?abstract_id=3344936">Ball et al, 2019</a> for scraping procedures that implement more exhaustive crawling, and <a href="https://www.sciencedirect.com/science/article/pii/S0955395916301335">Aldridge and Décary-Hétu, 2016b</a> for analyses of transactions through the proxy of feedback comments and/or drug listing ratings, and acknowledge the broader literature on these topics (too extensive to list here).</p>
